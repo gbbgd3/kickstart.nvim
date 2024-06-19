@@ -115,7 +115,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 -- Set Insert Cursor to Block
-vim.opt.guicursor = ''
+-- vim.opt.guicursor = ''
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
