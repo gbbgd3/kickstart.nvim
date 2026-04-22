@@ -10,8 +10,10 @@ local colors = {
   -- Strings (Original bright green)
   string     = "#53d549",
   -- Comments (Darker, muted green)
-  comment    = "#3a7a35", 
-  
+  comment    = "#3a7a35",
+
+  type = "#84f5f1";
+
   -- UI
   highlight  = "#1a2a26",
   line_fg    = "#354a44",
@@ -32,9 +34,9 @@ set(0, "CursorLineNr",{ fg = colors.text })
 -- 1. Uniform Base (Defaults to text color)
 local uniform = {
   "Identifier", "Function", "Statement", "Keyword",
-  "Type", "Constant", "Operator", "PreProc", 
-  "Special", "Macro", "Typedef", "@variable", 
-  "@parameter", "@field", "@property", "@type", 
+  "Type", "Constant", "Operator", "PreProc",
+  "Macro", "Typedef", "@variable",
+  "@parameter", "@field", "@property", "@type",
   "@function", "@keyword", "@constant"
 }
 
@@ -49,12 +51,15 @@ set(0, "@keyword",  { fg = colors.keyword_hi })
 
 -- 3. Primitives
 local primitives = {
-  "Number", "Boolean", "Float", 
+  "Number", "Boolean", "Float",
   "@number", "@boolean", "@null"
 }
 for _, group in ipairs(primitives) do
   set(0, group, { fg = colors.primitive })
 end
+
+
+set(0, "@type", { fg = colors.type })
 
 -- 4. Strings and Characters ('A', 'c')
 -- Treating Character as a String for that consistent green pop
