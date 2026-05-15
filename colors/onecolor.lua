@@ -1,6 +1,7 @@
 local colors = {
   -- Deep Forest Teal: Balanced for contrast and comfort
-  background = "#0b1614", 
+  --background = "#0b1614", 
+  background = "#0b1012", 
   -- Original warm sand text
   text       = "#d0b892",
   -- Keywords (brighter off-white)
@@ -12,7 +13,9 @@ local colors = {
   -- Comments (Darker, muted green)
   comment    = "#3a7a35",
 
-  type = "#84f5f1";
+  --type = "#84f5f1";
+  --type = "#57a19e";
+  type = "#44bdb8";
 
   -- UI
   highlight  = "#1a2a26",
@@ -60,6 +63,7 @@ end
 
 
 set(0, "@type", { fg = colors.type })
+set(0, "Type", { fg = colors.type })
 
 -- 4. Strings and Characters ('A', 'c')
 -- Treating Character as a String for that consistent green pop
